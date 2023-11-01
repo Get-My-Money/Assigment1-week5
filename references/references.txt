@@ -1,0 +1,6 @@
+https://arxiv.org/pdf/2109.08914.pdf - text explores strategies for reducing toxicity
+in written content, I focus on ideas from Chapter 4.
+
+
+https://github.com/s-nlp/detox - code implements text detoxification strategies,
+I mostly use models from the CondBERT approach.
