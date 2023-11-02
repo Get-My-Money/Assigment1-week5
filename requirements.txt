@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+datasets
+scikit-learn
+transformers==4.24
+keras_preprocessing
+torch
+scipy
+tqdm
