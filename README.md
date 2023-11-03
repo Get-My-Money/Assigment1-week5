@@ -1,18 +1,26 @@
 # Practical Machine Learning and Deep Learning - Assignment 1 - Text De-toxification
 
+## Personal information
+
+Author: Mark Zakharov
+<br>
+Email: ma.zakharov@innopolis.university
+<br>
+Group: BS20-DS
+
 ## Task description
 
 Text Detoxification Task is a process of transforming the text with toxic style into the text with the same meaning but with neutral style.
 
 > Formal definition of text detoxification task can be found in [Text Detoxification using Large Pre-trained Neural Models by Dale et al., page 14](https://arxiv.org/abs/2109.08914)
 
-Your assignment is to create a solution for detoxing text with high level of toxicity. It can be a model or set of models, or any algorithm that would work. 
+I create a solution for detoxing text with high level of toxicity.
 
 ## Data Labeling
 
 Level of Toxicity is labeled with annotating binary classification by people. Text is passed to annotators for them to put specific label toxic/non-toxic. Then number of positive / toxic assesments are divided by the total number of annotators. This process is performed for every entry in the data, resulting in toxicity dataset.
 
-By this process, we have text with toxicity level. However, for training the model it is best to have sample with high toxicity level and its paraphrazed version with low toxicity level. This gives an opportunity for the model to distiguish from the overall meaning of the text and concentrate on decreasing the level of toxicity (dirung the training process). That is why the data that is provided for you has the pair structure. Dataset structure is described in next section.
+By this process, we have text with toxicity level. However, for training the model it is best to have sample with high toxicity level and its paraphrazed version with low toxicity level. This gives an opportunity for the model to distiguish from the overall meaning of the text and concentrate on decreasing the level of toxicity (dirung the training process). That is why the data that is provided has the pair structure. Dataset structure is described in next section.
 
 ## Data Description
 
@@ -29,13 +37,7 @@ The data is given in the `.tsv` format, means columns are separated by `\t` symb
 | similarity | float | cosine similarity of the texts |
 | lenght_diff | float | relative length difference between texts |
 
-## Evaluation criterias
-
-This assignment is on creating the solution, not on evaluating your algorithm. Major part of the grade will be dedicated to the structure of the solution, your development choices and your explonation on how you approached the problem.
-
-Submission should be a link to GitHub repository. It should be open repository, so that the course team could assess it easily.
-
-The structure of the repository should has the following structure:
+## Structure of the repository
 
 ```
 text-detoxification
@@ -73,59 +75,11 @@ text-detoxification
 ```
 
 
-In the top `README.md` file put your name, email and group number. Additionaly, put basic commands how to use your repository. How to transform data, train model and make a predictions.
+In the `README.md` file, you’ll find my name, email, and group number. Additionally, it contains basic information on how to use this repository.
 
-In the `reports` directory create at least two report about your work. In the **first report**, describe your path in solution creation process. List any architectures, ideas, problems and data that leads to your final solution. In the **second report**, describe your final solution.
+The `reports` directory contains two reports about my work. In the **first report** describes my journey in creating the solution. It includes the architectures, ideas, problems, and data that led to my final solution. In the **second report** provides a detailed description of my final solution.
 
-In the `notebooks` directory put at least two notebooks. **First notebook** should contain your initial data exploration and basic ideas behind data preprocessing. **Second notebook** should contain information about final solution training and visualization.
+The `notebooks` directory contains two notebooks. **First notebook** includes my initial data exploration and the basic ideas behind data preprocessing. **Second notebook** provides information about the training and visualization of the final solution
 
-In the `src` directory you should put all the code that is used for the final solution. Provide the script for creation intermediate data in `src/data/`. Provide `train` and `prediction` scripts in `src/models`. Provide visualization script in `src/visualization/`.
+The `src` directory contains all the code used for the final solution. This includes a script for creating intermediate data in `src/data/`, `train` and `prediction` scripts in `src/models`, and a visualization script in `src/visualization/`.
 
-## Grading criterias
-
-Full assignment without any problems is said to be the `100%` solution.
-
-| Criteria | Weight (%) | Comment |
-| ---- | ----- | ----- |
-| Structure and code quality | 25 | Code quality, structure, comments, clean repo, commit history, reproducibility (manual seeding) |
-| Visualization, notebooks quality | 10 | Jupyter notebooks, visualizations |
-| Solution building | 40 |  Solution exploration, references, ideas decription, final report structure |
-| Final score, evaluation  | 15 | Evaluation function, final score, quality of results |
-| Usability, documentation | 10 | Docstrings, arguments parsing, README |
-
-If **PMLDL Course Team** will have any questions about your assignment or your work fails to show your results you will be called solution defence procedure. 
-
-## Report Examples
-### Solution Bulding Report Example
-
-```
-# Baseline: Dictionary based
-...
-# Hypothesis 1: Custom embeddings
-...
-# Hypothesis 2: More rnn layers
-...
-# Hypothesis 3: Pretrained embeddings
-...
-# Results
-...
-```
-
-### Final Solution Report Example
-
-```
-# Introduction
-...
-# Data analysis
-...
-# Model Specification
-...
-# Training Process
-...
-# Evaluation
-...
-# Results
-...
-```
-
-**Good luck! Have fun!**
